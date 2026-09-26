@@ -42,7 +42,6 @@ Calculator_Project/
 ├── README.md
 └── ...
 
-
 ```mermaid
 graph TD
     MainWindow["MainWindow\n(buttons)"]
