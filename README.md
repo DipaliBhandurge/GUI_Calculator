@@ -112,3 +112,19 @@ Review
  ↓
 Merge into main
 ```
+---
+
+**Architecture at this point:**
+```mermaid
+graph TD
+    MainWindow["MainWindow\n(QWidget + buttons + QLabel display)"]
+    User(("🧑 You")) -->|"clicks"| MainWindow
+    MainWindow -->|"directly edits text"| MainWindow
+```
+*(Notice: no separate "brain" yet — the window edits its own display
+text directly. That's OK for now; Phase 3-4 will fix it.)*
+
+**Milestone:** Clicking digits builds up a number string on screen,
+`C` clears it.
+
+---
