@@ -1,36 +1,49 @@
 # Calculator_Project
 
-## Phase 3: GUI Calculator
+## Phase 1: Console Calculator
 
-A GUI-based calculator developed in Cpp.
+A simple console-based calculator developed using C++ and CMake.
+
+## Phase 0: Setup
+
+The project setup includes:
+
+- C++ compiler (MinGW)
+- CMake
+- VS Code
+- C++17 standard
+- Git and GitHub
+
+A basic Hello World program was created and successfully built using CMake.
 
 ## Features
 
-- User-friendly graphical interface
 - Addition (+)
 - Subtraction (-)
 - Multiplication (*)
 - Division (/)
-- Clear button
-- Displays the entered numbers and results
-- Handles division by zero
-- Simple and easy-to-use calculator interface
+- User input handling
+- Division-by-zero handling
+- Invalid operator handling
+- Simple console interface
 
 ## Concepts Used
 
-- C Programming
-- GUI Widgets
-- Functions
+- C++ Programming
 - Variables and Data Types
+- Input and Output
 - Conditional Statements
-- Event Handling
-- User Input Handling
+- Arithmetic Operators
+- C++17
+- CMake
 
 ## Technologies Used
 
-- C
-- Qt
+- C++
 - CMake
+- MinGW
+- VS Code
+- Git & GitHub
 
 ## Project Structure
 
@@ -38,17 +51,64 @@ A GUI-based calculator developed in Cpp.
 Calculator_Project/
 │
 ├── CMakeLists.txt
-├── main.c
+├── main.cpp
 ├── README.md
-└── ...
+└── .gitignore
 ```
-## project structure
-```mermaid
-graph TD
-    MainWindow["MainWindow<br/>(buttons)"]
-    Equation["Equation<br/>(the math brain)"]
-    Label["QLabel<br/>(the display)"]
-    User(("🧑 You")) --> MainWindow
-    MainWindow -->|"append(digit/op)"| Equation
-    Equation -->|"changed() signal"| Label
+
+## Build and Run
+
+Configure the project:
+
+```bash
+cmake -S . -B build
+```
+
+Build the project:
+
+```bash
+cmake --build build
+```
+
+Run the calculator:
+
+```bash
+.\build\Calculator_Project.exe
+```
+
+## Phase Overview
+
+| Phase | Description | Status |
+|------|-------------|--------|
+| 0 | C++ and CMake setup | ✅ Completed |
+| 1 | Console Calculator | ✅ Completed |
+| 2 | First Qt GUI Window | ⏳ Upcoming |
+| 3 | Math Brain using Classes | ⏳ Upcoming |
+| 4 | Connect Brain to GUI | ⏳ Upcoming |
+| 5 | History List | ⏳ Upcoming |
+| 6 | UI Polish | ⏳ Upcoming |
+| 7 | Advanced Features | ⏳ Upcoming |
+| 8 | Menu & Extras | ⏳ Upcoming |
+| 9 | Packaging | ⏳ Upcoming |
+
+## Git Workflow
+
+The project uses a protected `main` branch.
+
+Development is done on the `dev` branch:
+
+```text
+dev
+ ↓
+Make changes
+ ↓
+Commit
+ ↓
+Push to dev
+ ↓
+Pull Request
+ ↓
+Review
+ ↓
+Merge into main
 ```
