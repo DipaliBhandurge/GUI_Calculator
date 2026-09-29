@@ -45,9 +45,9 @@ Calculator_Project/
 ## project structure
 ```mermaid
 graph TD
-    MainWindow["MainWindow\n(buttons)"]
-    Equation["Equation\n(the math brain)"]
-    Label["QLabel\n(the display)"]
+    MainWindow["MainWindow<br/>(buttons)"]
+    Equation["Equation<br/>(the math brain)"]
+    Label["QLabel<br/>(the display)"]
     User(("🧑 You")) --> MainWindow
     MainWindow -->|"append(digit/op)"| Equation
     Equation -->|"changed() signal"| Label
