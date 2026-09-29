@@ -2,7 +2,7 @@
 
 ## Phase 3: GUI Calculator
 
-A GUI-based calculator developed in C.
+A GUI-based calculator developed in Cpp.
 
 ## Features
 
