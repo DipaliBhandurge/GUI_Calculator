@@ -41,8 +41,8 @@ Calculator_Project/
 ├── main.c
 ├── README.md
 └── ...
-
-
+```
+## project structure
 ```mermaid
 graph TD
     MainWindow["MainWindow\n(buttons)"]
