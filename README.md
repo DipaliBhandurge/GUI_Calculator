@@ -1,4 +1,4 @@
-# Calculator_Project
+ # Calculator_Project
 
 ## Phase 1: Console Calculator
 
