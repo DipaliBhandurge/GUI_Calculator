@@ -5,4 +5,4 @@ project(Calculator_Project)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(Calculator_Project main.cpp)
+add_executable(gui_calculator src/main.cpp)

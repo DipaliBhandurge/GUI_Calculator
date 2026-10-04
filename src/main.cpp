@@ -1,3 +1,5 @@
+// Date: 2024-06-15
+// Phase 0 - Setup editor + CMake + Compiler and run all project
 #include <iostream>
 
 int main()
