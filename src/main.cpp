@@ -1,50 +1,57 @@
 // Date: 2024-06-15
 // Phase 0 - Setup editor + CMake + Compiler and run all project
+
 #include <iostream>
+using namespace std;
 
 int main()
 {
     double num1, num2;
     char op;
 
-    std::cout << "===== Simple Calculator =====\n";
+    cout << "===== Simple Calculator =====" << endl;
 
-    std::cout << "Enter first number: ";
-    std::cin >> num1;
+    cout << "Enter first number: ";
+    cin >> num1;
 
-    std::cout << "Enter operator (+, -, *, /): ";
-    std::cin >> op;
+    cout << "Enter operator (+, -, *, /): ";
+    cin >> op;
 
-    std::cout << "Enter second number: ";
-    std::cin >> num2;
+    cout << "Enter second number: ";
+    cin >> num2;
 
-    if (op == '+')
+    switch (op)
     {
-        std::cout << "Result = " << num1 + num2 << std::endl;
+        case '+':
+            cout << "Result = " << num1 + num2 << endl;
+            break;
+
+        case '-':
+            cout << "Result = " << num1 - num2 << endl;
+            break;
+
+        case '*':
+            cout << "Result = " << num1 * num2 << endl;
+            break;
+
+        case '/':
+            if (num2 == 0)
+            {
+                cout << "Error: Division by zero is not allowed." << endl;
+            }
+            else
+            {
+                cout << "Result = " << num1 / num2 << endl;
+            }
+            break;
+
+        default:
+            cout << "Error: Invalid operator." << endl;
     }
-    else if (op == '-')
-    {
-        std::cout << "Result = " << num1 - num2 << std::endl;
-    }
-    else if (op == '*')
-    {
-        std::cout << "Result = " << num1 * num2 << std::endl;
-    }
-    else if (op == '/')
-    {
-        if (num2 == 0)
-        {
-            std::cout << "Error: Division by zero is not allowed.\n";
-        }
-        else
-        {
-            std::cout << "Result = " << num1 / num2 << std::endl;
-        }
-    }
-    else
-    {
-        std::cout << "Error: Invalid operator.\n";
-    }
+
+    cout << "\nPress Enter to exit...";
+    cin.ignore();
+    cin.get();
 
     return 0;
 }
