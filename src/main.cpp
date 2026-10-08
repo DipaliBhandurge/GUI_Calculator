@@ -2,11 +2,12 @@
 // Phase 0 - Setup editor + CMake + Compiler and run all project
 
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main()
 {
-    double num1, num2;
+    long long num1, num2;
     char op;
 
     cout << "===== Simple Calculator =====" << endl;
@@ -41,7 +42,11 @@ int main()
             }
             else
             {
-                cout << "Result = " << num1 / num2 << endl;
+                long double result =
+                    static_cast<long double>(num1) / num2;
+
+                cout << fixed << setprecision(10);
+                cout << "Result = " << result << endl;
             }
             break;
 
