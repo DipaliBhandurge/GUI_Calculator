@@ -12,9 +12,9 @@ set(CMAKE_AUTOMOC ON)
 
 # Tell CMake where to find Qt if it isn't already on CMAKE_PREFIX_PATH.
 # Installed for this tutorial via: pip install aqtinstall, then
-#   aqt install-qt windows desktop 6.9.3 win64_mingw --outputdir C:\Qt
-if(NOT DEFINED CMAKE_PREFIX_PATH AND EXISTS "C:/Qt/6.9.3/mingw_64")
-    list(APPEND CMAKE_PREFIX_PATH "C:/Qt/6.9.3/mingw_64")
+#   aqt install-qt windows desktop 6.12.0 win64_mingw --outputdir C:\Qt
+if(NOT DEFINED CMAKE_PREFIX_PATH AND EXISTS "C:/Qt/6.12.0/mingw_64")
+    list(APPEND CMAKE_PREFIX_PATH "C:/Qt/6.12.0/mingw_64")
 endif()
 
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
