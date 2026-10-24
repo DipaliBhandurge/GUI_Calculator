@@ -5,4 +5,24 @@ project(Calculator_Project)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(gui_calculator src/main.cpp)
+# --- Phase 2: first Qt window ---
+# CMAKE_AUTOMOC lets CMake run Qt's "moc" tool automatically on any class
+# that uses the Q_OBJECT macro (needed for signals & slots to work).
+set(CMAKE_AUTOMOC ON)
+
+# Tell CMake where to find Qt if it isn't already on CMAKE_PREFIX_PATH.
+# Installed for this tutorial via: pip install aqtinstall, then
+#   aqt install-qt windows desktop 6.9.3 win64_mingw --outputdir C:\Qt
+if(NOT DEFINED CMAKE_PREFIX_PATH AND EXISTS "C:/Qt/6.9.3/mingw_64")
+    list(APPEND CMAKE_PREFIX_PATH "C:/Qt/6.9.3/mingw_64")
+endif()
+
+find_package(Qt6 REQUIRED COMPONENTS Widgets)
+qt_standard_project_setup()
+
+qt_add_executable(Calculator_Project
+    src/main.cpp
+    src/mainwindow.h
+    src/mainwindow.cpp
+)
+target_link_libraries(Calculator_Project PRIVATE Qt6::Widgets)
